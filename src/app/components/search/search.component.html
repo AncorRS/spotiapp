@@ -3,6 +3,26 @@
         <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar artista..."> 
     </div>
 </div>
+<div class="row">
+  <div class="col">
+      <input #termino1 type="text" (keyup)="buscar1(termino1.value)" class="form-control" placeholder="Buscar artista..."> 
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+      <input type="text" (keyup)="of_prueba()" class="form-control" placeholder="Buscar artista..."> 
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+      <input type="text" (keyup)="of_prueba1()" class="form-control" placeholder="Buscar artista..."> 
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+      <input type="text" (keyup)="from_prueba()" class="form-control" placeholder="Buscar artista..."> 
+  </div>
+</div>
 
 <app-loading class="m-5" *ngIf="loading"></app-loading>
 

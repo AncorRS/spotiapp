@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 })
 export class SpotifyService {
 
-  token: string="BQD9w2DnM2lfjJhSQjMMecnfxnO31PIwHYwd4a_PdLu1LQ_FWQdj21IBa6P29dbyQyvhNYhbLQGDeho20Dc";  
+  token: string="BQDJhTyboRIHzAuVjdyeBwxIqcbAgFZ0qWm7ZM3JWi6wfSU0PYQyGM1I7tu11uzpS9zwnkmhYUM27ydPXzw";  
 
   constructor(private http: HttpClient) { 
     console.log("SERVICIO LISTO");
@@ -26,7 +26,7 @@ export class SpotifyService {
 
   getNewReleases(){
 
-    return this.getQuery('browse/new-releases?limit=20')
+    return this.getQuery('browse/new-releases?limit=20') //limit=20 ES QUE HEMOS LIMITADO EL JSON A 20 ELEMENTOS
     .pipe(map(data =>{
 
       //return data.albums.items;
@@ -38,7 +38,7 @@ export class SpotifyService {
 
   getArtistas(termino: string){
 
-    return this.getQuery(`search?q=${termino}&type=artist&limit=15`)
+    return this.getQuery(`search?q=${termino}&type=artist&limit=15`) //ACORDARSE DE COMILLAS PLANAS CUANDO SE USE ${}
     .pipe(map(data => {
       return data['artists'].items;
     })); 

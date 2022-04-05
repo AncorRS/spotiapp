@@ -17,14 +17,17 @@ export class ArtistaComponent implements OnInit {
   constructor(private router: ActivatedRoute, private spotify: SpotifyService) { 
     this.loadingArtist=true;
 
+    //TODO APUNTA A QUE ESTE id ESTA RELACIONADO CON app-routing.mdule Y tarjetas.ts EN LA LINEA DE ABAJO
+    //this.router.navigate(['/artist', artistaId]);
     this.router.params.subscribe(params =>{
-      console.log(params['id']);
+      console.log(params['ida']); 
       //this.artista = this.spotify.getArtista(params.id);
       //console.log(this.artista);
       //this.getArtista1(params.id);
 
-      this.retardoPrueba(params.id); //PROBAMOS A RETARDAR PARA QUE NOS SALGA EL LOADING
-      this.getTopTracks(params['id']); //AQUI LLAMAMOS TOPTRACKS
+      //OJOOOOOOO params.id VIENE A SER CASI LO MISMO QUE params['id']
+      this.retardoPrueba(params.ida); //PROBAMOS A RETARDAR PARA QUE NOS SALGA EL LOADING
+      this.getTopTracks(params['ida']); //AQUI LLAMAMOS TOPTRACKS
     })
   }
 

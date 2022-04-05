@@ -1,7 +1,11 @@
   
 
 <div class="row row-cols-1 row-cols-md-3 m-5 animated fadeIn">
+
+    <!-- "items" ES EL NOMBRE DEL INPUT DEL .ts  -->
     <div (click)="verArtista(item)" *ngFor="let item of items" class="card puntero">
+
+      <!-- alt NOS MUESTRA MENSAJE EN CASO DE NO MOSTRAR IMAGEN -->
       <!--<img class="card-img-top"  [src]="cancion.images[0].url" alt="Card image cap">-->
       <img class="card-img-top"  [src]="item.images | noimage" alt="Card image cap">
       <div class="card-body">

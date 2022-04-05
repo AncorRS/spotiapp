@@ -8,7 +8,7 @@ import { SearchComponent } from './components/search/search.component';
 const routes: Routes = [
   {path:'home', component: HomeComponent},
   {path:'search', component: SearchComponent},
-  {path:'artist/:id', component: ArtistaComponent},
+  {path:'artist/:ida', component: ArtistaComponent}, //POR LA URL VIENE EL ID
   {path:'', pathMatch:'full', redirectTo:'home'},
   {path:'**', pathMatch:'full', redirectTo:'home'}
 ];
